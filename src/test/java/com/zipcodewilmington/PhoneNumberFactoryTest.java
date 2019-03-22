@@ -28,7 +28,9 @@ public class PhoneNumberFactoryTest {
         int phoneLineCode = 0;
 
         // : When
-        PhoneNumber phoneNumber = PhoneNumberFactory.createPhoneNumberSafely(areaCode, centralOfficeCode, phoneLineCode);
+        PhoneNumber phoneNumber = null;
+            phoneNumber = PhoneNumberFactory.createPhoneNumberSafely(areaCode, centralOfficeCode, phoneLineCode);
+
 
         // : Then
         Assert.assertEquals(null, phoneNumber);
@@ -42,7 +44,9 @@ public class PhoneNumberFactoryTest {
         int phoneLineCode = 5555;
 
         // : When
-        PhoneNumber phoneNumber = PhoneNumberFactory.createPhoneNumberSafely(areaCode, centralOfficeCode, phoneLineCode);
+        PhoneNumber phoneNumber = null;
+
+            phoneNumber = PhoneNumberFactory.createPhoneNumberSafely(areaCode, centralOfficeCode, phoneLineCode);
 
         // : Then
         Assert.assertEquals(phoneNumber.getAreaCode(), areaCode.toString());
@@ -56,7 +60,10 @@ public class PhoneNumberFactoryTest {
         int phoneLineCode = 5555;
 
         // : When
-        PhoneNumber phoneNumber = PhoneNumberFactory.createPhoneNumberSafely(areaCode, centralOfficeCode, phoneLineCode);
+        PhoneNumber phoneNumber = null;
+
+            phoneNumber = PhoneNumberFactory.createPhoneNumberSafely(areaCode, centralOfficeCode, phoneLineCode);
+
 
         // : Then
         Assert.assertEquals(phoneNumber.getCentralOfficeCode(), centralOfficeCode.toString());
@@ -71,7 +78,10 @@ public class PhoneNumberFactoryTest {
         Integer phoneLineCode = 5555;
 
         // : When
-        PhoneNumber phoneNumber = PhoneNumberFactory.createPhoneNumberSafely(areaCode, centralOfficeCode, phoneLineCode);
+        PhoneNumber phoneNumber = null;
+
+            phoneNumber = PhoneNumberFactory.createPhoneNumberSafely(areaCode, centralOfficeCode, phoneLineCode);
+
 
         // : Then
         Assert.assertEquals(phoneNumber.getPhoneLineCode(), phoneLineCode.toString());
@@ -82,7 +92,10 @@ public class PhoneNumberFactoryTest {
         for (int i = 0; i < 999; i++) {
             // : Given
             // : When
-            PhoneNumber phoneNumber = PhoneNumberFactory.createRandomPhoneNumber();
+            PhoneNumber phoneNumber = null;
+
+                phoneNumber = PhoneNumberFactory.createRandomPhoneNumber();
+
 
             // : Then
             Assert.assertTrue(phoneNumber != null);
